@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Responnsive Web Flex</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/img/logo.png" ></img>
+        <h1>ResponsiveFlex</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#responsive">Responsive</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#flex">Flex</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="responsive">
+        <div class="sec1">
+          <h2>
+            <span>ResponsiveFlex</span> una web donde aprender todas las
+            caracteristicas y usos de Flex
+          </h2>
+          <p>
+            ¡Prepárate para embarcarte en una aventura alucinante en el mundo del diseño web! Imagina una web donde te conviertes en un maestro del diseño flexible con CSS Flex. Te llevaré paso a paso para que domines esta poderosa herramienta y transformes cualquier sitio web en una obra de arte dinámica y adaptativa.¡Bienvenido a tu aventura con CSS Flex! </p>
+            <p>Aprenderás a centrar elementos con una precisión asombrosa, a organizar el contenido de manera eficiente y a crear interfaces impresionantes que se adaptan a cualquier dispositivo, desde móviles hasta pantallas gigantes. Descubrirás cómo manejar contenedores y elementos flexibles para construir diseños modernos y funcionales que cautivarán a tus visitantes. 
+            </p>
+            <p>No solo te enseñaré los conceptos básicos, sino que también explorarás técnicas avanzadas y casos de uso reales que te inspirarán a llevar tus proyectos al siguiente nivel. Con CSS Flex, la flexibilidad y la creatividad van de la mano, y tú estarás en el asiento del conductor, listo para sorprender y deleitar con tus habilidades de diseño web.
+          </p>
+          <p>¡La aventura de CSS Flex te espera! 🚀
+            ¿Listo para comenzar esta emocionante travesía en el mundo de CSS Flex?
+          </p>
+        </div>
+        <img class="sec2" src="./assets/img/hero_img.png" />
+      </section>
+      <section id="gallery">
+        <h2><span>Gallery</span></h2>
+            <ul>
+              <li><img src="./assets/img/img1.jpg"></li>
+              <li><img src="./assets/img/img2.jpg"></li>
+              <li><img src="./assets/img/img3.jpg"></li>
+            </ul>
+            <ul>
+              <li><img src="./assets/img/img4.jpg"></li>
+              <li><img src="./assets/img/img5.jpg"></li>
+              <li><img src="./assets/img/img6.jpg"></li>
+           </ul>
+      </section>
+      <section id="flex">
+
+        <h2><span>Contenido flex</span></h2>
+
+          <h3>Conceptos Clave: Main Axis y Cross Axis</h3>
+            <p>En Flexbox, hay dos ejes principales a considerar:</p>
+            <ul>
+              <li><span>Main Axis (Eje Principal):</span> Es el eje principal a lo largo del cual se alinean los elementos flexibles. Su dirección depende del valor de la propiedad <code>flex-direction</code>.
+              </li>
+              <ul>
+                  <li>Si <code>flex-direction</code> es <code>row</code> o <code>row-reverse</code>, el eje principal es horizontal (de izquierda a derecha o de derecha a izquierda).</li>
+                  <li>Si <code>flex-direction</code> es <code>column</code> o <code>column-reverse</code>, el eje principal es vertical (de arriba a abajo o de abajo a arriba).</li>
+              </ul>
+              <li><span>Cross Axis (Eje Cruzado):</span> Es el eje perpendicular al eje principal. La alineación en este eje depende de las propiedades <code>align-items</code> y <code>align-content</code>.</li>
+              <ul>
+                  <li>Si el eje principal es horizontal, el eje cruzado es vertical.</li>
+                  <li>Si el eje principal es vertical, el eje cruzado es horizontal.</li>
+              </ul>
+           </ul>
+
+          <h3>Guía de Flexbox en CSS</h3> 
+            <p>Flexbox es una herramienta poderosa y moderna en CSS para diseñar y distribuir elementos dentro de un contenedor de manera eficiente. A continuación, te presentamos una lista de algunos atributos de Flexbox y una descripción de cada uno:</p> 
+
+          <h3>1. display: flex</h3> 
+            <p>Convierte un elemento en un contenedor flexible y permite que sus hijos se alineen y distribuyan utilizando el modelo Flexbox.</p> 
+            <pre><code>.flex-container {
+              display: flex;
+} </code></pre> 
+            
+          <h3>2. flex-direction</h3> 
+            <p>Define la dirección en la que se colocan los elementos flexibles dentro del contenedor.</p> 
+<pre><code>.flex-container {
+    flex-direction: row;
+} </code></pre> 
+            <ul>
+              <li><code>row</code>: De izquierda a derecha (main axis horizontal).</li>
+              <li><code>row-reverse</code>: De derecha a izquierda (main axis horizontal). <strong>NO RECOMENDADO - accesibilidad</strong> </li>
+              <li><code>column</code>: De arriba a abajo (main axis vertical).</li>
+              <li><code>column-reverse</code>: De abajo a arriba (main axis vertical). <strong>NO RECOMENDADO - accesibilidad</strong> </li>
+            </ul>
+
+          <h3>3. flex-wrap</h3> 
+            <p>Define si los elementos flexibles deben envolverse dentro del contenedor o permanecer en una sola línea.</p> 
+<pre><code>.flex-container {
+    flex-wrap: nowrap; 
+} </code></pre> 
+            <ul>
+              <li><code>nowrap</code>: Los elementos se mantienen en una sola línea.</li>
+              <li><code>wrap</code>: Los elementos se envuelven en líneas adicionales según sea necesario.</li>
+              <li><code>wrap-reverse</code>: Los elementos se envuelven en líneas adicionales en orden inverso.</li>
+            </ul>
+
+          <h3>4. justify-content</h3> 
+            <p>Alinea los elementos flexibles a lo largo del eje principal del contenedor.</p> 
+<pre><code>.flex-container {
+    justify-content: flex-start;
+} </code></pre> 
+            <ul>
+              <li><code>flex-start</code>: Elementos alineados al inicio del main axis.</li>
+              <li><code>flex-end</code>: Elementos alineados al final del main axis.</li>
+              <li><code>center</code>: Elementos centrados en el main axis.</li>
+              <li><code>space-between</code>: Espacio igual entre los elementos en el main axis.</li>
+              <li><code>space-around</code>: Espacio igual alrededor de cada elemento en el main axis.</li>
+              <li><code>space-evenly</code>: Espacio uniformemente distribuido entre los elementos en el main axis.</li>
+            </ul>
+            
+          <h3>5. align-items</h3> 
+            <p>Alinea los elementos flexibles a lo largo del eje transversal del contenedor.</p> 
+<pre><code>.flex-container {
+    align-items: stretch;
+} </code></pre> 
+            <ul>
+              <li><code>stretch</code>: Elementos estirados para llenar el contenedor en el cross axis.</li>
+              <li><code>flex-start</code>: Elementos alineados al inicio del cross axis.</li>
+              <li><code>flex-end</code>: Elementos alineados al final del cross axis.</li>
+              <li><code>center</code>: Elementos centrados en el cross axis.</li>
+              <li><code>baseline</code>: Elementos alineados a la línea base del contenedor en el cross axis.</li>
+            </ul>
+
+          <h3>6. align-content</h3> 
+            <p>Alinea las líneas del contenedor flexible cuando hay espacio extra en el eje transversal.</p>
+<pre><code>.flex-container {
+    align-content: stretch; 
+} </code></pre> 
+            <ul>
+              <li><code>stretch</code>: Las líneas se estiran para llenar el contenedor en el cross axis.</li>
+              <li><code>flex-start</code>: Las líneas se alinean al inicio del cross axis.</li>
+              <li><code>flex-end</code>: Las líneas se alinean al final del cross axis.</li>
+              <li><code>center</code>: Las líneas se centran en el cross axis.</li>
+              <li><code>space-between</code>: Espacio igual entre las líneas en el cross axis.</li>
+              <li><code>space-around</code>: Espacio igual alrededor de cada línea en el cross axis.</li>
+            </ul>
+
+          <h3>7. gap</h3> 
+            <p>Define el espacio entre los elementos flexibles.  Valor en unidades de longitud, por ejemplo, <code>10px</code>.</p> 
+<pre><code>.flex-item {
+    gap: 0; 
+} </code></pre> 
+
+          <h3>8. flex-grow</h3> 
+            <p>Define cuánto debe crecer el elemento en relación con los demás elementos flexibles, <code>1</code> (predeterminado, el elemento se contrae) o <code>0</code> (el elemento no se contrae).</p> 
+<pre><code>.flex-item {
+    flex-grow: 1;
+} </code></pre>
+
+          <h3>9. flex-shrink</h3> 
+            <p>Establece cuánto debe encogerse el elemento si es necesario para evitar que el contenedor se desborde. Valor numérico para el encogimiento del elemento</p> 
+<pre><code>.flex-item {
+    flex-shrink: 1;
+} </code></pre> 
+
+          <h3>10. flex-basis</h3>
+            <p>Determina el tamaño inicial principal del elemento antes de que el espacio disponible sea distribuido.</p>
+<pre><code>.flex-item {
+    flex-basis: 100px; 
+} </code></pre> 
+
+          <h3>11. flex</h3>
+            <p>Es una propiedad abreviada que combina flex-grow, flex-shrink y flex-basis en una sola declaración.</p> 
+<pre><code>.flex-item {
+    flex: 1 1 150px; 
+} </code></pre> 
+
+          <h3>12. align-self</h3> 
+            <p>Permite ajustar la alineación del elemento de manera diferente a los demás elementos dentro del contenedor. Opciones: auto, flex-start, flex-end, center, baseline, stretch </p> 
+<pre><code>.flex-item {
+    align-self: flex-end; 
+} </code></pre> 
+
+          <h3>Continuaraa.....</h3> 
+            <p>Proximamente, mas contenido con Grid...  <span> Esta página esta maquetada usando Flex</span>. </p> 
+      </section>
+    </main>
+
+    <footer>
+      <div class="menu">
+      <ul>
+        <li><h3>Diseño : Agustín Linares</h3></li>
+        <li><a href="#">Volver Arriba</a></li>
+      </ul>
+      <ul class="rss">
+        <li><img src="./assets/ico/instagram.png"><a href="#">Instagram</a></li>
+        <li><img src="./assets/ico/facebook.png"><a href="#">Facebook</a></li>
+        <li><img src="./assets/ico/linkedin.png"><a href="#">Linkedin</a></li>
+      </ul>
+    </div>
+    </footer>
+  </body>
+</html>
